@@ -5,17 +5,17 @@ const papel = {  hand:"papel", winsAgainst:"piedra" };
 const handOptions = [piedra, papel, tijera]
 
 const victory = () => {
-    console.log("🚀 ~ victory")
+    console.log("🚀 ~ Victory :)")
     return "Victory :)"
 };
 
 const defeat = () => {
-    console.log("🚀 ~ defeat")
+    console.log("🚀 ~ Defeat :(")
     return "Defeat :("
 };
 
 const draw = () => {
-    console.log("🚀 ~ draw")
+    console.log("🚀 ~ Draw!! Try again :D")
     return "Draw!! Try again :D"
 };
 
@@ -32,9 +32,9 @@ const getPlayerHand = (playerInput) => {
 
 const playGame = (playerInput) => {
     let playerHand = getPlayerHand(playerInput)
-    console.log("🚀 ~ playGame ~ playerHand:", playerHand)
+    console.log("🚀 Player Hand:", playerHand)
     let computerHand = randomizeComputerHand()
-    console.log("🚀 ~ playGame ~ computerHand:", computerHand)
+    console.log("🚀 Computer Hand:", computerHand)
     if (playerHand.hand === computerHand.hand) return draw()
     else if (playerHand.winsAgainst === computerHand.hand) return victory()
     else return defeat()
